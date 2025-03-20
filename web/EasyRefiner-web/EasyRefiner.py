@@ -6,8 +6,8 @@ import gradio as gr
 import json
 import time
 
-sys.path.append("../PaddleReviewer-server")
-sys.path.append("../PaddleReviewer-web")
+sys.path.append("../EastRefiner-server")
+sys.path.append("../EastRefiner-web")
 from models.plms.inference.CRInferenceModel import cr_model
 from ModelConfig import ModelConfig
 #生成评论
