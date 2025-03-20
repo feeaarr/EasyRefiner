@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>com.example.demo1</id>
+    <name>EasyRefiner</name>
+    <vendor email="2428384302@qq.com" url="https://www.yourcompany.com">CSU</vendor>
+    <description><![CDATA[
+        描述我的插件！————————————————————————————————————————————————————————————————————————————————————————
+    ]]></description>
+
+    <!-- Update the compatibility range -->
+    <depends>com.intellij.modules.platform</depends>
+    <idea-version since-build="231.*" until-build="241.*"/>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <completion.contributor order="first, before commitCompletion" language="any" />
+        <applicationConfigurable instance="com.example.demo1.CmgPlugingSettingConfigurable"/>
+    </extensions>
+
+    <actions>
+        <action id="EasyRefiner" class="com.example.demo1.CodeReviewAciton" text="EasyRefiner" description="EasyRefiner" icon="AllIcons.Actions.EditSource">
+            <add-to-group group-id="ChangesView.CommitToolbar" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
